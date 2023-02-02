@@ -5,7 +5,7 @@ var status = 1
 # é responsavel por guardar a pontuação do jogador
 var vscore = 0
 # é um valor fixo utilizado para movimentar as entidades horizontalmente
-var x = 1.5 
+var x = 3
 # é um valor fixo utilizado para movimentar as entidades verticalmente
 var y = 1.5 
 
@@ -26,7 +26,7 @@ func _process(delta):
 			$background.position.x = 600
 			
 		# movimenta as colunas para colisão
-		$columns.position.x -= 4*x
+		$columns.position.x -= 2*x
 		if ($columns.position.x) < -550:
 			$columns.position.x = rand_range(0, 350) - 50
 			$columns.position.y = rand_range(0, 400) - 200
